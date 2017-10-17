@@ -18,3 +18,6 @@ wp-content/plugins/hello.php
 
 # mac file
 .DS_Store
+
+# config file
+wp-config.php
