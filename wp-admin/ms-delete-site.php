@@ -100,7 +100,7 @@ Webmaster
 		?></strong></label></p>
 		<?php submit_button( __( 'Delete My Site Permanently' ) ); ?>
 	</form>
-	<?php
+ 	<?php
 }
 echo '</div>';
 

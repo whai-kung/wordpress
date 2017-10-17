@@ -1725,8 +1725,8 @@ final class _WP_Editors {
 					<div class="river-waiting">
 						<span class="spinner"></span>
 					</div>
-				</div>
-			</div>
+ 				</div>
+ 			</div>
 		</div>
 		<div class="submitbox">
 			<div id="wp-link-cancel">

@@ -1671,7 +1671,7 @@ function wp_notify_moderator($comment_id) {
 
 	/* translators: Comment moderation. 1: Number of comments awaiting approval */
 	$notify_message .= sprintf( _n('Currently %s comment is waiting for approval. Please visit the moderation panel:',
-		'Currently %s comments are waiting for approval. Please visit the moderation panel:', $comments_waiting), number_format_i18n($comments_waiting) ) . "\r\n";
+ 		'Currently %s comments are waiting for approval. Please visit the moderation panel:', $comments_waiting), number_format_i18n($comments_waiting) ) . "\r\n";
 	$notify_message .= admin_url( "edit-comments.php?comment_status=moderated#wpbody-content" ) . "\r\n";
 
 	/* translators: Comment moderation notification email subject. 1: Site name, 2: Post title */
@@ -2530,3 +2530,4 @@ function wp_text_diff( $left_string, $right_string, $args = null ) {
 	return $r;
 }
 endif;
+

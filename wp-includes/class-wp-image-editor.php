@@ -487,3 +487,4 @@ abstract class WP_Image_Editor {
 		return $extensions[0];
 	}
 }
+

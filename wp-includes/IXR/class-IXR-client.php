@@ -114,11 +114,11 @@ class IXR_Client
                 $gettingHeaders = false;
             }
             if (!$gettingHeaders) {
-		// merged from WP #12559 - remove trim
+            	// merged from WP #12559 - remove trim
                 $contents .= $line;
             }
             if ($this->debug) {
-		$debugContents .= $line;
+            	$debugContents .= $line;
             }
         }
         if ($this->debug) {

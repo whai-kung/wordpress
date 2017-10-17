@@ -2,9 +2,9 @@ jQuery( function ( $ ) {
 	var mshotRemovalTimer = null;
 	var mshotSecondTryTimer = null
 	var mshotThirdTryTimer = null
-
+	
 	var mshotEnabledLinkSelector = 'a[id^="author_comment_url"], tr.pingback td.column-author a:first-of-type, td.comment p a';
-
+	
 	$('.akismet-status').each(function () {
 		var thisId = $(this).attr('commentid');
 		$(this).prependTo('#comment-' + thisId + ' .column-comment');
@@ -15,7 +15,7 @@ jQuery( function ( $ ) {
 	});
 
 	akismet_enable_comment_author_url_removal();
-
+	
 	$( '#the-comment-list' ).on( 'click', '.akismet_remove_url', function () {
 		var thisId = $(this).attr('commentid');
 		var data = {
@@ -135,7 +135,7 @@ jQuery( function ( $ ) {
 	} ).on( 'mouseover', 'tr', function () {
 		// When the mouse hovers over a comment row, begin preloading mshots for any links in the comment or the comment author.
 		var linksToPreloadMshotsFor = $( this ).find( mshotEnabledLinkSelector );
-
+		
 		linksToPreloadMshotsFor.each( function () {
 			// Don't attempt to preload an mshot for a single link twice. Browser caching should cover this, but in case of
 			// race conditions, save a flag locally when we've begun trying to preload one.
@@ -175,7 +175,7 @@ jQuery( function ( $ ) {
 			function(result) {
 				recheck_count += result.counts.processed;
 				spam_count += result.counts.spam;
-
+				
 				if (result.counts.processed < limit) {
 					window.location.href = $( '.checkforspam' ).data( 'success-url' ).replace( '__recheck_count__', recheck_count ).replace( '__spam_count__', spam_count );
 				}
@@ -186,11 +186,11 @@ jQuery( function ( $ ) {
 			}
 		);
 	}
-
+	
 	if ( "start_recheck" in WPAkismet && WPAkismet.start_recheck ) {
 		$( '.checkforspam' ).click();
 	}
-
+	
 	if ( typeof MutationObserver !== 'undefined' ) {
 		// Dynamically add the "X" next the the author URL links when a comment is quick-edited.
 		var comment_list_container = document.getElementById( 'the-comment-list' );
@@ -200,13 +200,13 @@ jQuery( function ( $ ) {
 				for ( var i = 0, _len = mutations.length; i < _len; i++ ) {
 					if ( mutations[i].addedNodes.length > 0 ) {
 						akismet_enable_comment_author_url_removal();
-
+						
 						// Once we know that we'll have to check for new author links, skip the rest of the mutations.
 						break;
 					}
 				}
 			} );
-
+			
 			observer.observe( comment_list_container, { attributes: true, childList: true, characterData: true } );
 		}
 	}
@@ -219,14 +219,14 @@ jQuery( function ( $ ) {
 				if ( $( this ).parent().find( '.akismet_remove_url' ).length > 0 ) {
 					return;
 				}
-
+			
 			var linkHref = $(this).attr( 'href' );
-
+		
 			// Ignore any links to the current domain, which are diagnostic tools, like the IP address link
 			// or any other links another plugin might add.
 			var currentHostParts = document.location.href.split( '/' );
 			var currentHost = currentHostParts[0] + '//' + currentHostParts[2] + '/';
-
+		
 			if ( linkHref.indexOf( currentHost ) != 0 ) {
 				var thisCommentId = $(this).parents('tr:first').attr('id').split("-");
 
@@ -240,7 +240,7 @@ jQuery( function ( $ ) {
 			}
 		});
 	}
-
+	
 	/**
 	 * Generate an mShot URL if given a link URL.
 	 *
@@ -250,14 +250,14 @@ jQuery( function ( $ ) {
 	 */
 	function akismet_mshot_url( linkUrl, retry ) {
 		var mshotUrl = '//s0.wordpress.com/mshots/v1/' + encodeURIComponent( linkUrl ) + '?w=900';
-
+		
 		if ( retry ) {
 			mshotUrl += '&r=' + encodeURIComponent( retry );
 		}
-
+		
 		return mshotUrl;
 	}
-
+	
 	/**
 	 * Begin loading an mShot preview of a link.
 	 *

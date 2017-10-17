@@ -75,7 +75,7 @@ function wp_category_checklist( $post_id = 0, $descendants_and_self = 0, $select
  * }
  */
 function wp_terms_checklist( $post_id = 0, $args = array() ) {
-	$defaults = array(
+ 	$defaults = array(
 		'descendants_and_self' => 0,
 		'selected_cats' => false,
 		'popular_cats' => false,

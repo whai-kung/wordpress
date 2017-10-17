@@ -78,7 +78,7 @@ if ( $action ) {
 				$user_id = wpmu_create_user( esc_html( strtolower( $user['username'] ) ), $password, esc_html( $user['email'] ) );
 
 				if ( false === $user_id ) {
-					$update = 'err_new_dup';
+		 			$update = 'err_new_dup';
 				} else {
 					add_user_to_blog( $id, $user_id, $_POST['new_role'] );
 					$update = 'newuser';

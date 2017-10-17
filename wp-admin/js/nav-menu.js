@@ -898,7 +898,7 @@ var wpNavMenu;
 
 				searchTimer = setTimeout( function() {
 					api.updateQuickSearchResults( $this );
-				}, 500 );
+ 				}, 500 );
 			}).on( 'blur', '.quick-search', function() {
 				api.lastSearch = '';
 			});

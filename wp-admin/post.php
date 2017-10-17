@@ -17,11 +17,11 @@ $submenu_file = 'edit.php';
 wp_reset_vars( array( 'action' ) );
 
 if ( isset( $_GET['post'] ) )
-	$post_id = $post_ID = (int) $_GET['post'];
+ 	$post_id = $post_ID = (int) $_GET['post'];
 elseif ( isset( $_POST['post_ID'] ) )
-	$post_id = $post_ID = (int) $_POST['post_ID'];
+ 	$post_id = $post_ID = (int) $_POST['post_ID'];
 else
-	$post_id = $post_ID = 0;
+ 	$post_id = $post_ID = 0;
 
 /**
  * @global string  $post_type

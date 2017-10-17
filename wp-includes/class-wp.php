@@ -235,7 +235,7 @@ class WP {
 							// This is a verbose page match, let's check to be sure about it.
 							$page = get_page_by_path( $matches[ $varmatch[1] ] );
 							if ( ! $page ) {
-								continue;
+						 		continue;
 							}
 
 							$post_status_obj = get_post_status_object( $page->post_status );
@@ -615,9 +615,9 @@ class WP {
 		global $wp_the_query;
 		$this->build_query_string();
 		$wp_the_query->query($this->query_vars);
-	}
+ 	}
 
-	/**
+ 	/**
 	 * Set the Headers for 404, if nothing is found for requested URL.
 	 *
 	 * Issue a 404 if a request doesn't match any posts and doesn't match
@@ -634,7 +634,7 @@ class WP {
      * @access public
 	 *
 	 * @global WP_Query $wp_query
-	 */
+ 	 */
 	public function handle_404() {
 		global $wp_query;
 

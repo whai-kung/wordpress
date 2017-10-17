@@ -560,13 +560,13 @@ function wp_dashboard_recent_drafts( $drafts = false ) {
 		$drafts = get_posts( $query_args );
 		if ( ! $drafts ) {
 			return;
-		}
-	}
+ 		}
+ 	}
 
 	echo '<div class="drafts">';
 	if ( count( $drafts ) > 3 ) {
 		echo '<p class="view-all"><a href="' . esc_url( admin_url( 'edit.php?post_status=draft' ) ) . '" aria-label="' . __( 'View all drafts' ) . '">' . _x( 'View all', 'drafts' ) . "</a></p>\n";
-	}
+ 	}
 	echo '<h2 class="hide-if-no-js">' . __( 'Drafts' ) . "</h2>\n<ul>";
 
 	$drafts = array_slice( $drafts, 0, 3 );
@@ -579,9 +579,9 @@ function wp_dashboard_recent_drafts( $drafts = false ) {
 		echo '<time datetime="' . get_the_time( 'c', $draft ) . '">' . get_the_time( __( 'F j, Y' ), $draft ) . '</time></div>';
 		if ( $the_content = wp_trim_words( $draft->post_content, 10 ) ) {
 			echo '<p>' . $the_content . '</p>';
-		}
+ 		}
 		echo "</li>\n";
-	}
+ 	}
 	echo "</ul>\n</div>";
 }
 

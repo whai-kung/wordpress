@@ -250,7 +250,7 @@ textarea[readonly] {
 .form-invalid select, .form-invalid select:focus {
 	border-color: #dc3232 !important;
 	-webkit-box-shadow: 0 0 2px rgba( 204, 0, 0, 0.8 );
-	box-shadow: 0 0 2px rgba( 204, 0, 0, 0.8 );
+ 	box-shadow: 0 0 2px rgba( 204, 0, 0, 0.8 );
 }
 
 .form-table .form-required.form-invalid td:after {

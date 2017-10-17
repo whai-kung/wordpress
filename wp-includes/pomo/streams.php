@@ -312,3 +312,4 @@ class POMO_CachedIntFileReader extends POMO_CachedFileReader {
 	}
 }
 endif;
+

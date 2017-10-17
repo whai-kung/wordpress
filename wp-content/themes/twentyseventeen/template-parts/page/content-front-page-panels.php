@@ -59,7 +59,7 @@ global $twentyseventeencounter;
 				) );
 				?>
 
-				<?php if ( $recent_posts->have_posts() ) : ?>
+		 		<?php if ( $recent_posts->have_posts() ) : ?>
 
 					<div class="recent-posts">
 

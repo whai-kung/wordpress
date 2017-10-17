@@ -1090,7 +1090,7 @@ class WP_Query {
 					'field' => 'slug',
 				);
 
-				if ( isset( $t->rewrite['hierarchical'] ) && $t->rewrite['hierarchical'] ) {
+ 				if ( isset( $t->rewrite['hierarchical'] ) && $t->rewrite['hierarchical'] ) {
 					$q[$t->query_var] = wp_basename( $q[$t->query_var] );
 				}
 
@@ -3406,14 +3406,14 @@ class WP_Query {
 	}
 
 	/**
-	 * Is the query for an existing archive page?
+ 	 * Is the query for an existing archive page?
+ 	 *
+ 	 * Month, Year, Category, Author, Post Type archive...
 	 *
-	 * Month, Year, Category, Author, Post Type archive...
-	 *
-	 * @since 3.1.0
-	 *
-	 * @return bool
-	 */
+ 	 * @since 3.1.0
+ 	 *
+ 	 * @return bool
+ 	 */
 	public function is_archive() {
 		return (bool) $this->is_archive;
 	}
@@ -4055,8 +4055,8 @@ class WP_Query {
 			}
 			$multipage = 1;
 		} else {
-			$multipage = 0;
-		}
+	 		$multipage = 0;
+	 	}
 
 		/**
 		 * Fires once the post data has been setup.

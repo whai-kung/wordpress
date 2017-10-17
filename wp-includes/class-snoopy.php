@@ -897,11 +897,11 @@ class Snoopy
 
 		$results = '';
 		do {
-		$_data = fread($fp, $this->maxlength);
-		if (strlen($_data) == 0) {
-			break;
-		}
-		$results .= $_data;
+    		$_data = fread($fp, $this->maxlength);
+    		if (strlen($_data) == 0) {
+        		break;
+    		}
+    		$results .= $_data;
 		} while(true);
 
 		if ($this->read_timeout > 0 && $this->_check_timeout($fp))

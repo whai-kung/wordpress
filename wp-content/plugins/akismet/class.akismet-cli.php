@@ -31,7 +31,7 @@ class Akismet_CLI extends WP_CLI_Command {
 			else {
 				$api_response = Akismet::recheck_comment( $comment_id, 'wp-cli' );
 			}
-
+			
 			if ( 'true' === $api_response ) {
 				WP_CLI::line( sprintf( __( "Comment #%d is spam.", 'akismet' ), $comment_id ) );
 			}
@@ -48,7 +48,7 @@ class Akismet_CLI extends WP_CLI_Command {
 			}
 		}
 	}
-
+	
 	/**
 	 * Recheck all comments in the Pending queue.
 	 *
@@ -61,12 +61,12 @@ class Akismet_CLI extends WP_CLI_Command {
 	public function recheck_queue() {
 		$batch_size = 100;
 		$start = 0;
-
+		
 		$total_counts = array();
-
+		
 		do {
 			$result_counts = Akismet_Admin::recheck_queue_portion( $start, $batch_size );
-
+			
 			if ( $result_counts['processed'] > 0 ) {
 				foreach ( $result_counts as $key => $count ) {
 					if ( ! isset( $total_counts[ $key ] ) ) {
@@ -80,10 +80,10 @@ class Akismet_CLI extends WP_CLI_Command {
 				$start -= $result_counts['spam']; // These comments will have been removed from the queue.
 			}
 		} while ( $result_counts['processed'] > 0 );
-
+		
 		WP_CLI::line( sprintf( _n( "Processed %d comment.", "Processed %d comments.", $total_counts['processed'], 'akismet' ), number_format( $total_counts['processed'] ) ) );
 		WP_CLI::line( sprintf( _n( "%d comment moved to Spam.", "%d comments moved to Spam.", $total_counts['spam'], 'akismet' ), number_format( $total_counts['spam'] ) ) );
-
+		
 		if ( $total_counts['error'] ) {
 			WP_CLI::line( sprintf( _n( "%d comment could not be checked.", "%d comments could not be checked.", $total_counts['error'], 'akismet' ), number_format( $total_counts['error'] ) ) );
 		}

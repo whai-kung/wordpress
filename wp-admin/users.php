@@ -319,7 +319,7 @@ case 'doremove':
 	$userids = $_REQUEST['users'];
 
 	$update = 'remove';
-	foreach ( $userids as $id ) {
+ 	foreach ( $userids as $id ) {
 		$id = (int) $id;
 		if ( !current_user_can('remove_user', $id) ) {
 			$update = 'err_admin_remove';
@@ -370,9 +370,9 @@ case 'remove':
 <ul>
 <?php
 	$go_remove = false;
-	foreach ( $userids as $id ) {
+ 	foreach ( $userids as $id ) {
 		$id = (int) $id;
-		$user = get_userdata( $id );
+ 		$user = get_userdata( $id );
 		if ( ! current_user_can( 'remove_user', $id ) ) {
 			/* translators: 1: user id, 2: user login */
 			echo "<li>" . sprintf(__('ID #%1$s: %2$s <strong>Sorry, you are not allowed to remove this user.</strong>'), $id, $user->user_login) . "</li>\n";
@@ -381,8 +381,8 @@ case 'remove':
 			echo "<li><input type=\"hidden\" name=\"users[]\" value=\"{$id}\" />" . sprintf(__('ID #%1$s: %2$s'), $id, $user->user_login) . "</li>\n";
 			$go_remove = true;
 		}
-	}
-	?>
+ 	}
+ 	?>
 </ul>
 <?php if ( $go_remove ) : ?>
 		<input type="hidden" name="action" value="doremove" />

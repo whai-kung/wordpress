@@ -547,13 +547,13 @@ class WP_Automatic_Updater {
 		 * the issue could actually be on WordPress.org's side.) If that one fails, then email.
 		 */
 		$send = true;
-		$transient_failures = array( 'incompatible_archive', 'download_failed', 'insane_distro', 'locked' );
-		if ( in_array( $error_code, $transient_failures ) && ! get_site_option( 'auto_core_update_failed' ) ) {
-			wp_schedule_single_event( time() + HOUR_IN_SECONDS, 'wp_maybe_auto_update' );
-			$send = false;
-		}
+  		$transient_failures = array( 'incompatible_archive', 'download_failed', 'insane_distro', 'locked' );
+  		if ( in_array( $error_code, $transient_failures ) && ! get_site_option( 'auto_core_update_failed' ) ) {
+  			wp_schedule_single_event( time() + HOUR_IN_SECONDS, 'wp_maybe_auto_update' );
+  			$send = false;
+  		}
 
-		$n = get_site_option( 'auto_core_update_notified' );
+  		$n = get_site_option( 'auto_core_update_notified' );
 		// Don't notify if we've already notified the same email address of the same version of the same notification type.
 		if ( $n && 'fail' == $n['type'] && $n['email'] == get_site_option( 'admin_email' ) && $n['version'] == $core_update->current )
 			$send = false;

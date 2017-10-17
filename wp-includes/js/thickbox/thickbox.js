@@ -73,7 +73,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 	   if(url.indexOf("?")!==-1){ //ff there is a query string involved
 			baseURL = url.substr(0, url.indexOf("?"));
 	   }else{
-			baseURL = url;
+	   		baseURL = url;
 	   }
 
 	   var urlString = /\.jpg$|\.jpeg$|\.png$|\.gif$|\.bmp$/;
@@ -283,7 +283,7 @@ function tb_showIframe(){
 }
 
 function tb_remove() {
-	jQuery("#TB_imageOff").unbind("click");
+ 	jQuery("#TB_imageOff").unbind("click");
 	jQuery("#TB_closeWindowButton").unbind("click");
 	jQuery( '#TB_window' ).fadeOut( 'fast', function() {
 		jQuery( '#TB_window, #TB_overlay, #TB_HideSelect' ).trigger( 'tb_unload' ).unbind().remove();

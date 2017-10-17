@@ -480,7 +480,7 @@ table.comments td.comment p a:after {
 	width: 54px;
 	height: 54px;
 }
-
+	
 .akismet-box p:after {
 	content: ".";
 	display: block;

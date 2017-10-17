@@ -73,7 +73,7 @@ function create_initial_taxonomies() {
 	) );
 
 	register_taxonomy( 'post_tag', 'post', array(
-		'hierarchical' => false,
+	 	'hierarchical' => false,
 		'query_var' => 'tag',
 		'rewrite' => $rewrite['post_tag'],
 		'public' => true,

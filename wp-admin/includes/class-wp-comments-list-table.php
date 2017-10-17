@@ -506,28 +506,28 @@ class WP_Comments_List_Table extends WP_List_Table {
 		unset( $GLOBALS['post'], $GLOBALS['comment'] );
 	}
 
-	/**
-	 * Generate and display row actions links.
-	 *
-	 * @since 4.3.0
-	 * @access protected
-	 *
-	 * @global string $comment_status Status for the current listed comments.
-	 *
-	 * @param WP_Comment $comment     The comment object.
-	 * @param string     $column_name Current column name.
-	 * @param string     $primary     Primary column name.
-	 * @return string|void Comment row actions output.
-	 */
-	protected function handle_row_actions( $comment, $column_name, $primary ) {
-		global $comment_status;
+ 	/**
+ 	 * Generate and display row actions links.
+ 	 *
+ 	 * @since 4.3.0
+ 	 * @access protected
+ 	 *
+ 	 * @global string $comment_status Status for the current listed comments.
+ 	 *
+ 	 * @param WP_Comment $comment     The comment object.
+ 	 * @param string     $column_name Current column name.
+ 	 * @param string     $primary     Primary column name.
+ 	 * @return string|void Comment row actions output.
+ 	 */
+ 	protected function handle_row_actions( $comment, $column_name, $primary ) {
+ 		global $comment_status;
 
 		if ( $primary !== $column_name ) {
 			return '';
 		}
 
-		if ( ! $this->user_can ) {
-			return;
+ 		if ( ! $this->user_can ) {
+ 			return;
 		}
 
 		$the_comment_status = wp_get_comment_status( $comment );

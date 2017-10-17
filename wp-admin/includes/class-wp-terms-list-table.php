@@ -321,7 +321,7 @@ class WP_Terms_List_Table extends WP_List_Table {
 	 */
 	public function single_row( $tag, $level = 0 ) {
 		global $taxonomy;
-		$tag = sanitize_term( $tag, $taxonomy );
+ 		$tag = sanitize_term( $tag, $taxonomy );
 
 		$this->level = $level;
 

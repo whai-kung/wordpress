@@ -826,7 +826,7 @@ function wp_media_upload_handler() {
 	if ( isset( $_POST['save'] ) ) {
 		$errors['upload_notice'] = __('Saved.');
 		wp_enqueue_script( 'admin-gallery' );
-		return wp_iframe( 'media_upload_gallery_form', $errors );
+ 		return wp_iframe( 'media_upload_gallery_form', $errors );
 
 	} elseif ( ! empty( $_POST ) ) {
 		$return = media_upload_form_handler();

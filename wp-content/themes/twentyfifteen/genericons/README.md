@@ -53,7 +53,7 @@ We don't often update icons, but do very carefully when we get good feedback sug
 
 **3.2**
 
-A number of new icons and a couple of quick updates.
+A number of new icons and a couple of quick updates. 
 
 * New: Activity
 * New: HTML anchor
@@ -73,14 +73,14 @@ A number of new icons and a couple of quick updates.
 * Update: Updated Foursquare icon
 
 Twitch and Spotify mark the last social icons that will be added to Genericons.
-Future social icons will have to happen in a separate font.
+Future social icons will have to happen in a separate font. 
 
 **3.1**
 
 Genericons is now generated using a commandline tool called FontCustom. This makes it far easier to add new icons to the font, but the switch means the download zip now has a different layout, fonts have different filenames, there's now no .otf font included (but the .ttf should suffice), and the font now has slightly different metrics. I've taken great care to ensure this new version should work as a drop-in replacement, but please be mindful and test carefully if you choose to upgrade.
 
 * Per feedback, the baked-in 16px width and height has been removed from the helper CSS. It wasn't really necessary (the glyph itself has these dimensions naturally), and it caused some headaches.
-* Base64 encoding is now included by default in the helper CSS. This makes it drop-in easy to get Genericons working in Firefox even when using a CDN.
+* Base64 encoding is now included by default in the helper CSS. This makes it drop-in easy to get Genericons working in Firefox even when using a CDN. 
 * Title attribute on website tool.
 * New: Website.
 * New: Ellipsis.
@@ -118,7 +118,7 @@ A slew of new stuff and updates.
 
 **3.0.1**
 
-Mostly maintenance.
+Mostly maintenance. 
 
 * Fixed an issue with the example page that showed an old "top" icon instead of the actual NEW "refresh" icon.
 * Added inverse Google+ and Path.
@@ -137,7 +137,7 @@ Mainly maintenance and a few new icons.
 
 **2.09**
 
-Updated Facebook icon to new version. Updated Instagram logo to use new one-color version. Updated Google+ icon to use same radius as Instagram and Facebook. Added a bunch of new icons, cog, unapprove, cart, media player buttons, tablet, send to tablet.
+Updated Facebook icon to new version. Updated Instagram logo to use new one-color version. Updated Google+ icon to use same radius as Instagram and Facebook. Added a bunch of new icons, cog, unapprove, cart, media player buttons, tablet, send to tablet.                                            
 
 **2.06**
 

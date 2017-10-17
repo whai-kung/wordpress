@@ -1158,7 +1158,7 @@ final class WP_Theme implements ArrayAccess {
 		/**
 		 * Filters the array of excluded directories and files while scanning theme folder.
 		 *
-		 * @since 4.7.4
+ 		 * @since 4.7.4
 		 *
 		 * @param array $exclusions Array of excluded directories and files.
 		 */

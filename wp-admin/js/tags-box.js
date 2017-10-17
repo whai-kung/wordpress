@@ -104,8 +104,8 @@ var tagBox, array_unique_noempty;
 							 * key this will fire the `keyup` event on the input.
 							 */
 							if ( 13 === e.keyCode || 32 === e.keyCode ) {
-								$( this ).closest( '.tagsdiv' ).find( 'input.newtag' ).focus();
-							}
+ 								$( this ).closest( '.tagsdiv' ).find( 'input.newtag' ).focus();
+ 							}
 
 							tagBox.userAction = 'remove';
 							tagBox.parseTags( this );

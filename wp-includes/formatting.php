@@ -1705,7 +1705,7 @@ function remove_accents( $string ) {
 			$chars[ 'ß' ] = 'ss';
 		} elseif ( 'da_DK' === $locale ) {
 			$chars[ 'Æ' ] = 'Ae';
-			$chars[ 'æ' ] = 'ae';
+ 			$chars[ 'æ' ] = 'ae';
 			$chars[ 'Ø' ] = 'Oe';
 			$chars[ 'ø' ] = 'oe';
 			$chars[ 'Å' ] = 'Aa';
@@ -3914,7 +3914,7 @@ function esc_js( $text ) {
 	 * @since 2.0.6
 	 *
 	 * @param string $safe_text The text after it has been escaped.
-	 * @param string $text      The text prior to being escaped.
+ 	 * @param string $text      The text prior to being escaped.
 	 */
 	return apply_filters( 'js_escape', $safe_text, $text );
 }
@@ -3939,7 +3939,7 @@ function esc_html( $text ) {
 	 * @since 2.8.0
 	 *
 	 * @param string $safe_text The text after it has been escaped.
-	 * @param string $text      The text prior to being escaped.
+ 	 * @param string $text      The text prior to being escaped.
 	 */
 	return apply_filters( 'esc_html', $safe_text, $text );
 }
@@ -3964,7 +3964,7 @@ function esc_attr( $text ) {
 	 * @since 2.0.6
 	 *
 	 * @param string $safe_text The text after it has been escaped.
-	 * @param string $text      The text prior to being escaped.
+ 	 * @param string $text      The text prior to being escaped.
 	 */
 	return apply_filters( 'attribute_escape', $safe_text, $text );
 }
@@ -3985,7 +3985,7 @@ function esc_textarea( $text ) {
 	 * @since 3.1.0
 	 *
 	 * @param string $safe_text The text after it has been escaped.
-	 * @param string $text      The text prior to being escaped.
+ 	 * @param string $text      The text prior to being escaped.
 	 */
 	return apply_filters( 'esc_textarea', $safe_text, $text );
 }
@@ -4006,7 +4006,7 @@ function tag_escape( $tag_name ) {
 	 * @since 2.8.0
 	 *
 	 * @param string $safe_tag The tag name after it has been escaped.
-	 * @param string $tag_name The text before it was escaped.
+ 	 * @param string $tag_name The text before it was escaped.
 	 */
 	return apply_filters( 'tag_escape', $safe_tag, $tag_name );
 }

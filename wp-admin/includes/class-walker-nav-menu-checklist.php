@@ -99,7 +99,7 @@ class Walker_Nav_Menu_Checklist extends Walker_Nav_Menu {
 		}
 
 		$output .= isset( $title ) ? esc_html( $title ) : esc_html( $item->title );
-		$output .= '</label>';
+ 		$output .= '</label>';
 
 		// Menu item hidden fields
 		$output .= '<input type="hidden" class="menu-item-db-id" name="menu-item[' . $possible_object_id . '][menu-item-db-id]" value="' . $possible_db_id . '" />';

@@ -501,7 +501,7 @@ img.wp-oembed {
 	}
 
 	.mce-content-body img.mce-wp-nextpage {
-	background-image: url( images/pagebreak-2x.png );
+    	background-image: url( images/pagebreak-2x.png );
 		background-size: 1900px 20px;
 	}
 }

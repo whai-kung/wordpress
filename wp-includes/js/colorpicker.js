@@ -69,7 +69,7 @@ function getAnchorPosition(anchorname) {
 	else if (document.all) { use_css=true; }
 	else if (document.layers) { use_layers=true; }
 	// Logic to find position
-	if (use_gebi && document.all) {
+ 	if (use_gebi && document.all) {
 		x=AnchorPosition_getPageOffsetLeft(document.all[anchorname]);
 		y=AnchorPosition_getPageOffsetTop(document.all[anchorname]);
 		}
@@ -78,7 +78,7 @@ function getAnchorPosition(anchorname) {
 		x=AnchorPosition_getPageOffsetLeft(o);
 		y=AnchorPosition_getPageOffsetTop(o);
 		}
-	else if (use_css) {
+ 	else if (use_css) {
 		x=AnchorPosition_getPageOffsetLeft(document.all[anchorname]);
 		y=AnchorPosition_getPageOffsetTop(document.all[anchorname]);
 		}

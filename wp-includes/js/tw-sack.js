@@ -9,24 +9,24 @@ function sack(file) {
 
 	this.resetData = function() {
 		this.method = "POST";
-		this.queryStringSeparator = "?";
+  		this.queryStringSeparator = "?";
 		this.argumentSeparator = "&";
 		this.URLString = "";
 		this.encodeURIString = true;
-		this.execute = false;
-		this.element = null;
+  		this.execute = false;
+  		this.element = null;
 		this.elementObj = null;
 		this.requestFile = file;
 		this.vars = new Object();
 		this.responseStatus = new Array(2);
-	};
+  	};
 
 	this.resetFunctions = function() {
-		this.onLoading = function() { };
-		this.onLoaded = function() { };
-		this.onInteractive = function() { };
-		this.onCompletion = function() { };
-		this.onError = function() { };
+  		this.onLoading = function() { };
+  		this.onLoaded = function() { };
+  		this.onInteractive = function() { };
+  		this.onCompletion = function() { };
+  		this.onError = function() { };
 		this.onFail = function() { };
 	};
 

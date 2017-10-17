@@ -8,7 +8,7 @@
 	</div>
 	<div class="akismet-lower">
 		<?php Akismet_Admin::display_status(); ?>
-
+		
 		<div class="akismet-box">
 			<h2><?php esc_html_e( 'Eliminate spam from your site', 'akismet' ); ?></h2>
 			<p><?php esc_html_e( 'Select one of the options below to get started.', 'akismet' ); ?></p>

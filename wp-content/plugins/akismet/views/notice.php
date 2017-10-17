@@ -85,15 +85,15 @@
 </div>
 <?php elseif ( $type == 'new-key-valid' ) :
 	global $wpdb;
-
+	
 	$check_pending_link = false;
-
+	
 	$at_least_one_comment_in_moderation = !! $wpdb->get_var( "SELECT comment_ID FROM {$wpdb->comments} WHERE comment_approved = '0' LIMIT 1" );
-
+	
 	if ( $at_least_one_comment_in_moderation)  {
 		$check_pending_link = 'edit-comments.php?akismet_recheck=' . wp_create_nonce( 'akismet_recheck' );
 	}
-
+	
 	?>
 <div class="akismet-alert akismet-active">
 	<h3 class="akismet-key-status"><?php esc_html_e( 'Akismet is now protecting your site from spam. Happy blogging!', 'akismet' ); ?></h3>

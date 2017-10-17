@@ -142,7 +142,7 @@ final class WP_Screen {
 	 */
 	private $_help_sidebar = '';
 
-	/**
+ 	/**
 	 * The accessible hidden headings and text associated with the screen, if any.
 	 *
 	 * @since 4.4.0
@@ -656,7 +656,7 @@ final class WP_Screen {
 		return $this->columns;
 	}
 
-	/**
+ 	/**
 	 * Get the accessible hidden headings and text used in the screen.
 	 *
 	 * @since 4.4.0

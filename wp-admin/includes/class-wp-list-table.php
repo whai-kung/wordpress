@@ -775,17 +775,17 @@ class WP_List_Table {
 
 		$disable_first = $disable_last = $disable_prev = $disable_next = false;
 
-		if ( $current == 1 ) {
+ 		if ( $current == 1 ) {
 			$disable_first = true;
 			$disable_prev = true;
-		}
+ 		}
 		if ( $current == 2 ) {
 			$disable_first = true;
 		}
-		if ( $current == $total_pages ) {
+ 		if ( $current == $total_pages ) {
 			$disable_last = true;
 			$disable_next = true;
-		}
+ 		}
 		if ( $current == $total_pages - 1 ) {
 			$disable_last = true;
 		}
@@ -1322,7 +1322,7 @@ class WP_List_Table {
 	 */
 	protected function handle_row_actions( $item, $column_name, $primary ) {
 		return $column_name === $primary ? '<button type="button" class="toggle-row"><span class="screen-reader-text">' . __( 'Show more details' ) . '</span></button>' : '';
-	}
+ 	}
 
 	/**
 	 * Handle an incoming ajax request (called from admin-ajax.php)

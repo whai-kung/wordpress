@@ -124,8 +124,8 @@
 			var pageYOffset, height;
 
 			if ( editor && ! editor.isHidden() ) {
-				return;
-			}
+ 				return;
+ 			}
 
 			reset = ( reset === 'reset' ) || ( textLength && textLength > textEditor.value.length );
 			height = textEditor.style.height;
@@ -138,12 +138,12 @@
 				window.scrollTo( window.pageXOffset, pageYOffset );
 			} else if ( parseInt( textEditor.style.height, 10 ) < textEditor.scrollHeight ) {
 				textEditor.style.height = textEditor.scrollHeight + 'px';
-			}
+ 			}
 
-			textLength = textEditor.value.length;
-		}
+ 			textLength = textEditor.value.length;
+ 		}
 
-		function mceGetCursorOffset() {
+ 		function mceGetCursorOffset() {
 			if ( ! editor ) {
 				return false;
 			}

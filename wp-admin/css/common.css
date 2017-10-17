@@ -1739,7 +1739,7 @@ form.upgrade .hint {
 #contextual-help-wrap h5 {
 	margin: 0;
 	padding: 8px 0;
-	font-size: 13px;
+ 	font-size: 13px;
 	font-weight: 600;
 }
 
@@ -2216,9 +2216,9 @@ h1.nav-tab-wrapper, /* Back-compat for pre-4.4 */
 
 /* Back-compat for plugins. Deprecated. Use .wp-clearfix instead. */
 .nav-tab-wrapper:not(.wp-clearfix):after {
-	content: "";
-	display: table;
-	clear: both;
+ 	content: "";
+ 	display: table;
+ 	clear: both;
  }
 
 .ie8 .nav-tab-wrapper {

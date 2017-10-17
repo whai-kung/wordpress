@@ -424,7 +424,7 @@ function wpmu_validate_user_signup($user_name, $user_email) {
 	$user_email = sanitize_email( $user_email );
 
 	if ( empty( $user_name ) )
-		$errors->add('user_name', __( 'Please enter a username.' ) );
+	   	$errors->add('user_name', __( 'Please enter a username.' ) );
 
 	$illegal_names = get_site_option( 'illegal_names' );
 	if ( ! is_array( $illegal_names ) ) {
@@ -1422,12 +1422,12 @@ function install_blog( $blog_id, $blog_title = '' ) {
 
 	if ( ! is_subdomain_install() ) {
 
-		if ( 'https' === parse_url( get_site_option( 'siteurl' ), PHP_URL_SCHEME ) ) {
-			$siteurl = set_url_scheme( $siteurl, 'https' );
-		}
-		if ( 'https' === parse_url( get_home_url( get_network()->site_id ), PHP_URL_SCHEME ) ) {
-			$home = set_url_scheme( $home, 'https' );
-		}
+ 		if ( 'https' === parse_url( get_site_option( 'siteurl' ), PHP_URL_SCHEME ) ) {
+ 			$siteurl = set_url_scheme( $siteurl, 'https' );
+ 		}
+ 		if ( 'https' === parse_url( get_home_url( get_network()->site_id ), PHP_URL_SCHEME ) ) {
+ 			$home = set_url_scheme( $home, 'https' );
+ 		}
 
 	}
 
@@ -1607,7 +1607,7 @@ function wpmu_welcome_user_notification( $user_id, $password, $meta = array() ) 
 	$current_network = get_network();
 
 	/**
-	 * Filters whether to bypass the welcome email after user activation.
+ 	 * Filters whether to bypass the welcome email after user activation.
 	 *
 	 * Returning false disables the welcome email.
 	 *

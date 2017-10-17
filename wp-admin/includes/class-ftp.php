@@ -271,7 +271,7 @@ class ftp_base {
 	function SetServer($host, $port=21, $reconnect=true) {
 		if(!is_long($port)) {
 	        $this->verbose=true;
-	    $this->SendMSG("Incorrect port syntax");
+    	    $this->SendMSG("Incorrect port syntax");
 			return FALSE;
 		} else {
 			$ip=@gethostbyname($host);

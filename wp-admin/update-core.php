@@ -32,18 +32,18 @@ if ( ! current_user_can( 'update_core' ) && ! current_user_can( 'update_themes' 
  * @param object $update
  */
 function list_core_update( $update ) {
-	global $wp_local_package, $wpdb;
-	static $first_pass = true;
+ 	global $wp_local_package, $wpdb;
+  	static $first_pass = true;
 
 	$wp_version = get_bloginfo( 'version' );
 
-	if ( 'en_US' == $update->locale && 'en_US' == get_locale() )
-		$version_string = $update->current;
-	// If the only available update is a partial builds, it doesn't need a language-specific version string.
-	elseif ( 'en_US' == $update->locale && $update->packages->partial && $wp_version == $update->partial_version && ( $updates = get_core_updates() ) && 1 == count( $updates ) )
-		$version_string = $update->current;
-	else
-		$version_string = sprintf( "%s&ndash;<strong>%s</strong>", $update->current, $update->locale );
+ 	if ( 'en_US' == $update->locale && 'en_US' == get_locale() )
+ 		$version_string = $update->current;
+ 	// If the only available update is a partial builds, it doesn't need a language-specific version string.
+ 	elseif ( 'en_US' == $update->locale && $update->packages->partial && $wp_version == $update->partial_version && ( $updates = get_core_updates() ) && 1 == count( $updates ) )
+ 		$version_string = $update->current;
+ 	else
+ 		$version_string = sprintf( "%s&ndash;<strong>%s</strong>", $update->current, $update->locale );
 
 	$current = false;
 	if ( !isset($update->response) || 'latest' == $update->response )

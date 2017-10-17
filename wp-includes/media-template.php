@@ -69,7 +69,7 @@ function wp_underscore_video_template() {
 		h = Math.ceil( ( data.model.height * w ) / data.model.width );
 	} else {
 		h = data.model.height;
-	}
+ 	}
 
 	if ( w ) {
 		w_rule = 'width: ' + w + 'px; ';

@@ -109,3 +109,4 @@ if ( $tab == 'type' || $tab == 'type_url' || ! array_key_exists( $tab , media_up
 	 */
 	do_action( "media_upload_{$tab}" );
 }
+

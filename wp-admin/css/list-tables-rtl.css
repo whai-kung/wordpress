@@ -365,7 +365,7 @@ td.plugin-title p {
 table.media .column-title .media-icon {
 	float: right;
 	min-height: 60px;
-	margin: 0 0 0 9px;
+ 	margin: 0 0 0 9px;
 }
 
 table.media .column-title .media-icon img {
@@ -512,10 +512,10 @@ th.asc a:focus span.sorting-indicator:before {
 
 .wp-list-table .toggle-row:focus:before {
     -webkit-box-shadow:
-	0 0 0 1px #5b9dd9,
+    	0 0 0 1px #5b9dd9,
 		0 0 2px 1px rgba(30, 140, 190, .8);
     box-shadow:
-	0 0 0 1px #5b9dd9,
+    	0 0 0 1px #5b9dd9,
 		0 0 2px 1px rgba(30, 140, 190, .8);
 }
 

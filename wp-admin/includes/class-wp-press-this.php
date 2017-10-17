@@ -943,7 +943,7 @@ class WP_Press_This {
 		<div class="tagsdiv" id="post_tag">
 			<div class="jaxtag">
 			<input type="hidden" name="tax_input[post_tag]" class="the-tags" value="<?php echo $esc_tags; // escaped in get_terms_to_edit() ?>">
-			<?php
+		 	<?php
 
 			if ( $user_can_assign_terms ) {
 				?>
@@ -1046,7 +1046,7 @@ class WP_Press_This {
 	 * @since 4.2.0
 	 * @access public
 	 *
-	 * @param array $data The site's data.
+ 	 * @param array $data The site's data.
 	 * @return string Discovered canonical URL, or empty
 	 */
 	public function get_canonical_link( $data ) {

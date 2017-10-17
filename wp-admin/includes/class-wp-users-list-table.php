@@ -61,7 +61,7 @@ class WP_Users_List_Table extends WP_List_Table {
 	/**
 	 * Check the current user's permissions.
 	 *
-	 * @since 3.1.0
+ 	 * @since 3.1.0
 	 * @access public
 	 *
 	 * @return bool

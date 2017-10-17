@@ -844,7 +844,7 @@ function update_core($from, $to) {
 
 	/*
 	 * Import $wp_version, $required_php_version, and $required_mysql_version from the new version.
-	 * DO NOT globalise any variables imported from `version-current.php` in this function.
+	 * DO NOT globalise any variables imported from `version-current.php` in this function. 
 	 *
 	 * BC Note: $wp_filesystem->wp_content_dir() returned unslashed pre-2.8
 	 */
@@ -1217,8 +1217,8 @@ function _redirect_to_about_wordpress( $new_version ) {
 	if ( 'update-core.php' != $pagenow )
 		return;
 
-	if ( 'do-core-upgrade' != $action && 'do-core-reinstall' != $action )
-		return;
+ 	if ( 'do-core-upgrade' != $action && 'do-core-reinstall' != $action )
+ 		return;
 
 	// Load the updated default text localization domain for new strings.
 	load_default_textdomain();

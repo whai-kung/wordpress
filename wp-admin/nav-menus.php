@@ -670,7 +670,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 	do_action( 'after_menu_locations_table' ); ?>
 	<?php else : ?>
 	<div class="manage-menus">
-		<?php if ( $menu_count < 2 ) : ?>
+ 		<?php if ( $menu_count < 2 ) : ?>
 		<span class="add-edit-menu-action">
 			<?php printf( __( 'Edit your menu below, or <a href="%s">create a new menu</a>.' ), esc_url( add_query_arg( array( 'action' => 'edit', 'menu' => 0 ), admin_url( 'nav-menus.php' ) ) ) ); ?>
 		</span><!-- /add-edit-menu-action -->
@@ -755,7 +755,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 					<?php } else {
 						$menu_name_val = 'value="' . esc_attr( $nav_menu_selected_title ) . '"';
 					} ?>
-					<input type="hidden" name="action" value="update" />
+ 					<input type="hidden" name="action" value="update" />
 					<input type="hidden" name="menu" id="menu" value="<?php echo esc_attr( $nav_menu_selected_id ); ?>" />
 					<div id="nav-menu-header">
 						<div class="major-publishing-actions wp-clearfix">

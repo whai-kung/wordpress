@@ -316,7 +316,7 @@ class SimplePie_Misc
 		elseif (function_exists('mb_convert_encoding') && ($return = SimplePie_Misc::change_encoding_mbstring($data, $input, $output)))
 		{
 			return $return;
-		}
+ 		}
 		// This is last, as behaviour of this varies with OS userland and PHP version
 		elseif (function_exists('iconv') && ($return = SimplePie_Misc::change_encoding_iconv($data, $input, $output)))
 		{
@@ -2244,3 +2244,4 @@ function embed_wmedia(width, height, link) {
 		// No-op
 	}
 }
+

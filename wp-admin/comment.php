@@ -95,7 +95,7 @@ case 'spam'    :
 	if ( $action == str_replace( '1', 'approve', $comment->comment_approved ) ) {
 		wp_redirect( admin_url( 'edit-comments.php?same=' . $comment_id ) );
 		die();
-	}
+ 	}
 
 	require_once( ABSPATH . 'wp-admin/admin-header.php' );
 

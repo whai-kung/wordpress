@@ -64,8 +64,8 @@ function create_initial_post_types() {
 			'name' => _x('Media', 'post type general name'),
 			'name_admin_bar' => _x( 'Media', 'add new from admin bar' ),
 			'add_new' => _x( 'Add New', 'add new media' ),
-			'edit_item' => __( 'Edit Media' ),
-			'view_item' => __( 'View Attachment Page' ),
+ 			'edit_item' => __( 'Edit Media' ),
+ 			'view_item' => __( 'View Attachment Page' ),
 			'attributes' => __( 'Attachment Attributes' ),
 		),
 		'public' => true,
@@ -2557,10 +2557,10 @@ function wp_delete_post( $postid = 0, $force_delete = false ) {
 function _reset_front_page_settings_for_post( $post_id ) {
 	$post = get_post( $post_id );
 	if ( 'page' == $post->post_type ) {
-		/*
-		 * If the page is defined in option page_on_front or post_for_posts,
-		 * adjust the corresponding options.
-		 */
+	 	/*
+	 	 * If the page is defined in option page_on_front or post_for_posts,
+	 	 * adjust the corresponding options.
+	 	 */
 		if ( get_option( 'page_on_front' ) == $post->ID ) {
 			update_option( 'show_on_front', 'posts' );
 			update_option( 'page_on_front', 0 );

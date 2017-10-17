@@ -384,7 +384,7 @@ class WP_Filesystem_Base {
 	 *
 	 * Converts '-rw-r--r--' to 0644
 	 * From "info at rvgate dot nl"'s comment on the PHP documentation for chmod()
-	 *
+ 	 *
 	 * @link https://secure.php.net/manual/en/function.chmod.php#49614
 	 *
 	 * @access public
@@ -567,7 +567,7 @@ class WP_Filesystem_Base {
 	 * @access public
 	 * @since 2.5.0
 	 * @abstract
-	 *
+	 * 
 	 * @param string $file Path to the file.
 	 * @return string|bool Username of the user or false on error.
 	 */

@@ -3450,8 +3450,8 @@
 
               PclZip::privErrorLog(PCLZIP_ERR_UNSUPPORTED_COMPRESSION,
 			                       "Filename '".$v_header['stored_filename']."' is "
-							   ."compressed by an unsupported compression "
-							   ."method (".$v_header['compression'].") ");
+				  	    	  	   ."compressed by an unsupported compression "
+				  	    	  	   ."method (".$v_header['compression'].") ");
 
               return PclZip::errorCode();
 		  }
@@ -3469,7 +3469,7 @@
 
               PclZip::privErrorLog(PCLZIP_ERR_UNSUPPORTED_ENCRYPTION,
 			                       "Unsupported encryption for "
-							   ." filename '".$v_header['stored_filename']
+				  	    	  	   ." filename '".$v_header['stored_filename']
 								   ."'");
 
               return PclZip::errorCode();
@@ -3540,7 +3540,7 @@
 
           // ----- Look for user callback abort
           if ($v_result1 == 2) {
-		break;
+          	break;
           }
         }
         // ----- Look for extraction in standard output
@@ -3563,7 +3563,7 @@
 
           // ----- Look for user callback abort
           if ($v_result1 == 2) {
-		break;
+          	break;
           }
         }
         // ----- Look for normal extraction
@@ -3591,7 +3591,7 @@
 
           // ----- Look for user callback abort
           if ($v_result1 == 2) {
-		break;
+          	break;
           }
         }
       }
@@ -3710,7 +3710,7 @@
       if ($v_result == 2) {
         // ----- This status is internal and will be changed in 'skipped'
         $p_entry['status'] = "aborted";
-	$v_result = PCLZIP_ERR_USER_ABORTED;
+      	$v_result = PCLZIP_ERR_USER_ABORTED;
       }
 
       // ----- Update the informations
@@ -3773,7 +3773,7 @@
         // ----- Change the file status
         if (   (isset($p_options[PCLZIP_OPT_REPLACE_NEWER]))
 		    && ($p_options[PCLZIP_OPT_REPLACE_NEWER]===true)) {
-		  }
+	  	  }
 		    else {
             $p_entry['status'] = "newer_exist";
 
@@ -3825,7 +3825,7 @@
         // ----- Look for not compressed file
         if ($p_entry['compression'] == 0) {
 
-		  // ----- Opening destination file
+    		  // ----- Opening destination file
           if (($v_dest_file = @fopen($p_entry['filename'], 'wb')) == 0)
           {
 
@@ -3930,10 +3930,10 @@
       }
     }
 
-	// ----- Change abort status
-	if ($p_entry['status'] == "aborted") {
+  	// ----- Change abort status
+  	if ($p_entry['status'] == "aborted") {
         $p_entry['status'] = "skipped";
-	}
+  	}
 
     // ----- Look for post-extract callback
     elseif (isset($p_options[PCLZIP_CB_POST_EXTRACT])) {
@@ -3949,7 +3949,7 @@
 
       // ----- Look for abort result
       if ($v_result == 2) {
-	$v_result = PCLZIP_ERR_USER_ABORTED;
+      	$v_result = PCLZIP_ERR_USER_ABORTED;
       }
     }
 
@@ -4077,7 +4077,7 @@
       if ($v_result == 2) {
         // ----- This status is internal and will be changed in 'skipped'
         $p_entry['status'] = "aborted";
-	$v_result = PCLZIP_ERR_USER_ABORTED;
+      	$v_result = PCLZIP_ERR_USER_ABORTED;
       }
 
       // ----- Update the informations
@@ -4137,7 +4137,7 @@
 
       // ----- Look for abort result
       if ($v_result == 2) {
-	$v_result = PCLZIP_ERR_USER_ABORTED;
+      	$v_result = PCLZIP_ERR_USER_ABORTED;
       }
     }
 
@@ -4190,7 +4190,7 @@
       if ($v_result == 2) {
         // ----- This status is internal and will be changed in 'skipped'
         $p_entry['status'] = "aborted";
-	$v_result = PCLZIP_ERR_USER_ABORTED;
+      	$v_result = PCLZIP_ERR_USER_ABORTED;
       }
 
       // ----- Update the informations
@@ -4230,10 +4230,10 @@
 
     }
 
-	// ----- Change abort status
-	if ($p_entry['status'] == "aborted") {
+  	// ----- Change abort status
+  	if ($p_entry['status'] == "aborted") {
         $p_entry['status'] = "skipped";
-	}
+  	}
 
     // ----- Look for post-extract callback
     elseif (isset($p_options[PCLZIP_CB_POST_EXTRACT])) {
@@ -4257,7 +4257,7 @@
 
       // ----- Look for abort result
       if ($v_result == 2) {
-	$v_result = PCLZIP_ERR_USER_ABORTED;
+      	$v_result = PCLZIP_ERR_USER_ABORTED;
       }
     }
 
@@ -4487,27 +4487,27 @@
   {
     $v_result=1;
 
-	// ----- Check the static values
-	// TBC
-	if ($p_local_header['filename'] != $p_central_header['filename']) {
-	}
-	if ($p_local_header['version_extracted'] != $p_central_header['version_extracted']) {
-	}
-	if ($p_local_header['flag'] != $p_central_header['flag']) {
-	}
-	if ($p_local_header['compression'] != $p_central_header['compression']) {
-	}
-	if ($p_local_header['mtime'] != $p_central_header['mtime']) {
-	}
-	if ($p_local_header['filename_len'] != $p_central_header['filename_len']) {
-	}
+  	// ----- Check the static values
+  	// TBC
+  	if ($p_local_header['filename'] != $p_central_header['filename']) {
+  	}
+  	if ($p_local_header['version_extracted'] != $p_central_header['version_extracted']) {
+  	}
+  	if ($p_local_header['flag'] != $p_central_header['flag']) {
+  	}
+  	if ($p_local_header['compression'] != $p_central_header['compression']) {
+  	}
+  	if ($p_local_header['mtime'] != $p_central_header['mtime']) {
+  	}
+  	if ($p_local_header['filename_len'] != $p_central_header['filename_len']) {
+  	}
 
-	// ----- Look for flag bit 3
-	if (($p_local_header['flag'] & 8) == 8) {
+  	// ----- Look for flag bit 3
+  	if (($p_local_header['flag'] & 8) == 8) {
           $p_local_header['size'] = $p_central_header['size'];
           $p_local_header['compressed_size'] = $p_central_header['compressed_size'];
           $p_local_header['crc'] = $p_central_header['crc'];
-	}
+  	}
 
     // ----- Return
     return $v_result;
@@ -4807,7 +4807,7 @@
           }
       }
       else {
-	$v_found = true;
+      	$v_found = true;
       }
 
       // ----- Look for deletion
@@ -5373,7 +5373,7 @@
 
 	// ----- Swap back magic_quotes
 	if ($this->magic_quotes_status == 1) {
-	  @set_magic_quotes_runtime($this->magic_quotes_status);
+  	  @set_magic_quotes_runtime($this->magic_quotes_status);
 	}
 
     // ----- Return

@@ -1117,7 +1117,7 @@ function wp_dropdown_pages( $args = '' ) {
 	 * @param string $output HTML output for drop down list of pages.
 	 * @param array  $r      The parsed arguments array.
 	 * @param array  $pages  List of WP_Post objects returned by `get_pages()`
-	 */
+ 	 */
 	$html = apply_filters( 'wp_dropdown_pages', $output, $r, $pages );
 
 	if ( $r['echo'] ) {

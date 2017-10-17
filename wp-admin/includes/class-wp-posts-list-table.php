@@ -147,7 +147,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 		$per_page = $this->get_items_per_page( 'edit_' . $post_type . '_per_page' );
 
 		/** This filter is documented in wp-admin/includes/post.php */
-		$per_page = apply_filters( 'edit_posts_per_page', $per_page, $post_type );
+ 		$per_page = apply_filters( 'edit_posts_per_page', $per_page, $post_type );
 
 		if ( $this->hierarchical_display ) {
 			$total_items = $wp_query->post_count;

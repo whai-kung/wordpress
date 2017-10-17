@@ -3624,3 +3624,4 @@ class getid3_id3v2 extends getid3_handler
 	}
 
 }
+

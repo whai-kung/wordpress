@@ -36,7 +36,7 @@ class WP_Widget_Recent_Comments extends WP_Widget {
 		}
 	}
 
-	/**
+ 	/**
 	 * Outputs the default styles for the Recent Comments widget.
 	 *
 	 * @since 2.8.0

@@ -117,7 +117,7 @@ if ( isset($_GET['action']) ) {
 		) );
 
 		if ( is_wp_error( $api ) ) {
-			wp_die( $api );
+	 		wp_die( $api );
 		}
 
 		$title = __('Plugin Install');
@@ -224,7 +224,7 @@ if ( isset($_GET['action']) ) {
 		$api = themes_api('theme_information', array('slug' => $theme, 'fields' => array('sections' => false, 'tags' => false) ) ); //Save on a bit of bandwidth.
 
 		if ( is_wp_error($api) )
-			wp_die($api);
+	 		wp_die($api);
 
 		wp_enqueue_script( 'customize-loader' );
 

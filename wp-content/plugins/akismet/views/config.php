@@ -27,7 +27,7 @@
 						</a>
 					</div>
 				</div>
-
+				
 				<div class="akismet-new-snapshot">
 					<iframe allowtransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 220px; overflow: hidden;" src="<?php printf( '//akismet.com/web/1.0/snapshot.php?blog=%s&api_key=%s&height=200&locale=%s', urlencode( get_option( 'home' ) ), Akismet::get_api_key(), get_locale() );?>"></iframe>
 					<ul>
@@ -116,10 +116,10 @@
 													value="1"
 													type="checkbox"
 													<?php
-
+													
 													// If the option isn't set, or if it's enabled ('1'), or if it was enabled a long time ago ('true'), check the checkbox.
 													checked( true, ( in_array( get_option( 'akismet_show_user_comments_approved' ), array( false, '1', 'true' ), true ) ) );
-
+													
 													?>
 													/>
 												<?php esc_html_e( 'Show the number of approved comments beside each comment author', 'akismet' ); ?>
@@ -137,9 +137,9 @@
 										</fieldset>
 										<span class="akismet-note"><strong><?php esc_html_e('Note:', 'akismet');?></strong>
 										<?php
-
+									
 										$delete_interval = max( 1, intval( apply_filters( 'akismet_delete_comment_interval', 15 ) ) );
-
+									
 										printf(
 											_n(
 												'Spam in the <a href="%1$s">spam folder</a> older than 1 day is deleted automatically.',
@@ -150,7 +150,7 @@
 											admin_url( 'edit-comments.php?comment_status=spam' ),
 											$delete_interval
 										);
-
+									
 										?>
 									</td>
 								</tr>
@@ -172,7 +172,7 @@
 					</form>
 				</div>
 			</div>
-
+			
 			<?php if ( ! Akismet::predefined_api_key() ) { ?>
 				<div class="akismet-card">
 					<div class="akismet-section-header">
@@ -180,7 +180,7 @@
 							<span><?php esc_html_e( 'Account' , 'akismet'); ?></span>
 						</div>
 					</div>
-
+				
 					<div class="inside">
 						<table cellspacing="0" border="0" class="akismet-settings">
 							<tbody>
@@ -195,17 +195,17 @@
 									<th scope="row" align="left"><?php esc_html_e( 'Status' , 'akismet');?></th>
 									<td width="5%"/>
 									<td align="left">
-										<p><?php
+										<p><?php 
 											if ( 'cancelled' == $akismet_user->status ) :
-												esc_html_e( 'Cancelled', 'akismet' );
+												esc_html_e( 'Cancelled', 'akismet' ); 
 											elseif ( 'suspended' == $akismet_user->status ) :
 												esc_html_e( 'Suspended', 'akismet' );
 											elseif ( 'missing' == $akismet_user->status ) :
-												esc_html_e( 'Missing', 'akismet' );
+												esc_html_e( 'Missing', 'akismet' ); 
 											elseif ( 'no-sub' == $akismet_user->status ) :
 												esc_html_e( 'No Subscription Found', 'akismet' );
 											else :
-												esc_html_e( 'Active', 'akismet' );
+												esc_html_e( 'Active', 'akismet' );  
 											endif; ?></p>
 									</td>
 								</tr>

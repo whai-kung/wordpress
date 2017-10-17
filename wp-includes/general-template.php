@@ -2710,10 +2710,10 @@ function feed_links_extra( $args = array() ) {
 			$href = get_tag_feed_link( $term->term_id );
 		}
 	} elseif ( is_tax() ) {
-		$term = get_queried_object();
-		$tax = get_taxonomy( $term->taxonomy );
-		$title = sprintf( $args['taxtitle'], get_bloginfo('name'), $args['separator'], $term->name, $tax->labels->singular_name );
-		$href = get_term_feed_link( $term->term_id, $term->taxonomy );
+ 		$term = get_queried_object();
+ 		$tax = get_taxonomy( $term->taxonomy );
+ 		$title = sprintf( $args['taxtitle'], get_bloginfo('name'), $args['separator'], $term->name, $tax->labels->singular_name );
+ 		$href = get_term_feed_link( $term->term_id, $term->taxonomy );
 	} elseif ( is_author() ) {
 		$author_id = intval( get_query_var('author') );
 
